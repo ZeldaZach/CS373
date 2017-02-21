@@ -1,0 +1,467 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Zachary Halpern – Homework #4
+\end_layout
+
+\begin_layout Example*
+2: Let M = (Q, Σ, 
+\begin_inset Formula $\delta$
+\end_inset
+
+, q0, F) be a DFA.
+ Let M' = (Q U {q0'}, Σ, 
+\begin_inset Formula $\delta$
+\end_inset
+
+', q0', {q0}).
+ Define 
+\begin_inset Formula $\delta$
+\end_inset
+
+'(q0', ɛ) = F and 
+\begin_inset Formula $\delta$
+\end_inset
+
+'(q, x) = { q in Q | q = 
+\begin_inset Formula $\delta$
+\end_inset
+
+(q', x) for some q' in Q }, with x in Σ.
+ This is the construction from problem 1.31 with L(M') = L(M)R.
+ Prove L(M') = L(M)R.
+\end_layout
+
+\begin_layout Proof
+We need to prove by showing each is a subset of the other.
+\end_layout
+
+\begin_layout Proof
+(<=) Suppose 
+\begin_inset Formula $L(M)$
+\end_inset
+
+ is a regular language.
+ Since this language is regular, there is a DFA that defines it.
+\end_layout
+
+\begin_layout Proof
+With a DFA, we can add a new start state, flip the direction of the arrows,
+ and call the original start state the accept state.
+\end_layout
+
+\begin_layout Proof
+Lets say 
+\begin_inset Formula $w=abcde$
+\end_inset
+
+, makes it through the DFA M and is accepted through the states 
+\begin_inset Formula $q_{0}q_{1}q_{2}q_{3}q_{4}$
+\end_inset
+
+, in that order, with 
+\begin_inset Formula $q_{4}\in F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+The new DFA, 
+\begin_inset Formula $M'$
+\end_inset
+
+, will have a new start state, 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+' and on reading the reverse of the string, 
+\begin_inset Formula $w'=edcba$
+\end_inset
+
+, will transition backwards until it hits the original start state.
+\end_layout
+
+\begin_layout Proof
+(I.e.
+ e will lead from 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+' to 
+\begin_inset Formula $q_{4}$
+\end_inset
+
+ and the d will lead to 
+\begin_inset Formula $q_{3}$
+\end_inset
+
+ ...
+ until the a leads us from 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+ to 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ which is the only accept state in the reverse DFA.)
+\end_layout
+
+\begin_layout Proof
+Therefore, 
+\begin_inset Formula $L(M')\subseteq L(M)$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Proof
+(=>) Suppose 
+\begin_inset Formula $L(M')$
+\end_inset
+
+ is a regular language.
+ Since this language is regular, there is a DFA that defines it.
+\end_layout
+
+\begin_layout Proof
+We can now take this DFA and attempt to reverse it.
+\end_layout
+
+\begin_layout Proof
+Lets say 
+\begin_inset Formula $w=edcba$
+\end_inset
+
+ which makes it through this DFA M' and goes through the states in the following
+ order, until it reaches accept state 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+: 
+\begin_inset Formula $q_{4}q_{3}q_{2}q_{1}q_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Lets construct a new DFA now, which we will call M that instead starts at
+ the accept state, 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ and the former start state, 
+\begin_inset Formula $q_{0}'\in F$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+We know that 
+\begin_inset Formula $q_{0}'=q_{4}$
+\end_inset
+
+ as it uses the last accept state as this new 
+\begin_inset Quotes eld
+\end_inset
+
+start state,
+\begin_inset Quotes erd
+\end_inset
+
+ so 
+\begin_inset Formula $q_{4}\in F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+If we attempt to pass the string 
+\begin_inset Formula $w=abcde$
+\end_inset
+
+ through this new DFA, it will take the reverse of the initial arrows of
+ M', so it will go through the states
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $q_{0}q_{1}q_{2}q_{3}q_{4}$
+\end_inset
+
+, ending at 
+\begin_inset Formula $q_{4}$
+\end_inset
+
+ which happened to be our initial start state and is the accept state of
+ this new DFA.
+ 
+\end_layout
+
+\begin_layout Proof
+Therefore, 
+\begin_inset Formula $L(M)\subseteq L(M').$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Example*
+9a: Two examples of strings that are members and two that are not (
+\begin_inset Formula $a^{*}b^{*}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example*
+In Member:
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $1)ab$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $2)aaab$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+NOT In Member:
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $1)ba$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $2)aaba$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+9b: Two examples of strings that are members and two that are not (
+\begin_inset Formula $a(ba)^{*}b$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example*
+In Member:
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $1)ab$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $2)ababab$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+NOT In Member:
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $1)bba$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $2)abaa$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+10 (1.36): Let 
+\begin_inset Formula $B_{n}=\{a^{k}|$
+\end_inset
+
+ k is a multiple of n}.
+ Show that for each 
+\begin_inset Formula $n\geq1,$
+\end_inset
+
+ the language 
+\begin_inset Formula $B_{n}$
+\end_inset
+
+ is regular.
+\end_layout
+
+\begin_layout Proof
+For every 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ we can construct a DFA with n states.
+ The construction is as follows:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $M=(Q,\Sigma,\delta,q_{s},F)$
+\end_inset
+
+ where
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Q=\{q_{0},q_{1},q_{2},...,q_{n-1}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma=\{a\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\delta(q_{i},a)=q_{j},$
+\end_inset
+
+ where 
+\begin_inset Formula $j=(i+1)\%n$
+\end_inset
+
+ (AKA everytime we hit a multiple of n, we return to state 
+\begin_inset Formula $q_{0}.$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $q_{s}=\{q_{0}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $F=\{q_{0}\}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

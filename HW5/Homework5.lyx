@@ -1,0 +1,1325 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Zachary Halpern – Homework #5
+\end_layout
+
+\begin_layout Example*
+(3) 1.29: Use pumping lemma to show following languages not regular: 
+\begin_inset Formula $A=\{www|w\in\{a,b\}^{*}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Assume A is a regular language.
+ As such, there must exist a p, pumping length, st 
+\begin_inset Formula $|w|\geq p.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $s=www=a^{p}ba^{p}ba^{p}b$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $|s|\geq p,$
+\end_inset
+
+ we can use the Pumping Lemma to split it up into three strings: 
+\begin_inset Formula $s=xyz.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since the first P symbols are all 
+\begin_inset Formula $a$
+\end_inset
+
+'s, we know that x and y can only be 
+\begin_inset Formula $a$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'s
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ contains the remainder of the string.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ can have zero or more elements and 
+\begin_inset Formula $y$
+\end_inset
+
+ must have at least one element, we can write these variables as:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x=a^{j},j\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $y=a^{k},\geq1$
+\end_inset
+
+ and 
+\begin_inset Formula $z=a^{l}ba^{p}ba^{p}b$
+\end_inset
+
+ where 
+\begin_inset Formula $l$
+\end_inset
+
+ is the remaining 
+\begin_inset Formula $a$
+\end_inset
+
+'s after we take 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ from it.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $a^{p}ba^{p}ba^{p}b=s=xyz=a^{j}a^{k}a^{l}ba^{p}ba^{p}b=a^{j+k+l}ba^{p}ba^{p}b$
+\end_inset
+
+ we can conclude that 
+\begin_inset Formula $j+k+l=p$
+\end_inset
+
+ must be true.
+\end_layout
+
+\begin_layout Proof
+However, if we pump 
+\begin_inset Formula $y$
+\end_inset
+
+ up, we now get 
+\begin_inset Formula $xy^{2}z=a^{j}a^{k}a^{k}a^{l}ba^{p}ba^{p}b=a^{j+k+k+l}ba^{p}ba^{p}b=a^{p+k}ba^{p}ba^{p}b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+But 
+\begin_inset Formula $p+k\not=p$
+\end_inset
+
+ since 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+ so this is not a regular language.
+\end_layout
+
+\begin_layout Example*
+(4) 1.46a: Prove the following languages are not regular: 
+\begin_inset Formula $A=\{0^{n}1^{m}0^{n}|m,n\geq0\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Assume A is a regular language.
+ As such, there must exist a p, pumping length, st 
+\begin_inset Formula $|w|\geq p.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w=0^{p}1^{p}0^{p}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $|w|\geq p,$
+\end_inset
+
+ we can use the Pumping Lemma to split it up into three strings: 
+\begin_inset Formula $w=xyz.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Since the first P symbols are all 
+\begin_inset Formula $0$
+\end_inset
+
+'s, we know that 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ can only be 
+\begin_inset Formula $0$
+\end_inset
+
+'s and 
+\begin_inset Formula $z$
+\end_inset
+
+contains the remainder of the string.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ can have zero or more elements and 
+\begin_inset Formula $y$
+\end_inset
+
+ must have at least one element, we can write these variables as:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x=0^{j},j\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $y=0^{k},k\geq1$
+\end_inset
+
+ and 
+\begin_inset Formula $z=0^{l}1^{p}0^{p}$
+\end_inset
+
+ where 
+\begin_inset Formula $l$
+\end_inset
+
+ is the remaining 
+\begin_inset Formula $0$
+\end_inset
+
+'s after we take 
+\begin_inset Formula $x$
+\end_inset
+
+and 
+\begin_inset Formula $y$
+\end_inset
+
+from it.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $0^{p}1^{p}0^{p}=w=xyz=0^{j}0^{k}0^{l}1^{p}0^{p}=0^{j+k+l}1^{p}0^{p}$
+\end_inset
+
+ we can conclude that 
+\begin_inset Formula $j+k+l=p$
+\end_inset
+
+ must be true.
+\end_layout
+
+\begin_layout Proof
+However, if we choose to pump 
+\begin_inset Formula $y$
+\end_inset
+
+ up to 
+\begin_inset Formula $xy^{2}z$
+\end_inset
+
+ we get 
+\begin_inset Formula $0^{j}0^{k}0^{k}0^{l}1^{p}0^{p}=0^{j+k+l+k}1^{p}0^{p}=0^{p+k}1^{p}0^{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+But 
+\begin_inset Formula $p+k\not=p$
+\end_inset
+
+ since 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+ so this is not a regular language.
+ 
+\end_layout
+
+\begin_layout Example*
+(5) 1.46c: Prove the following languages are not regular: 
+\begin_inset Formula $C=\{w|w\in\{0,1\}^{*}$
+\end_inset
+
+ and is not a palindrome}
+\end_layout
+
+\begin_layout Proof
+Assume B is a regular language.
+ As such, there must exist a p, pumping length, st 
+\begin_inset Formula $|w|\geq p.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w=0^{p}110^{p-1}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $|w|\geq p,$
+\end_inset
+
+ we can use the Pumping Lemma to split it up into three strings: 
+\begin_inset Formula $w=xyz.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Since the first P symbols are all 
+\begin_inset Formula $0$
+\end_inset
+
+'s, we know that 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ can only be 
+\begin_inset Formula $0$
+\end_inset
+
+'s and 
+\begin_inset Formula $z$
+\end_inset
+
+contains the remainder of the string.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ can have zero or more elements and 
+\begin_inset Formula $y$
+\end_inset
+
+ must have at least one element, we can write these variables as:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x=0^{j},j\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $y=0^{k},k\geq1$
+\end_inset
+
+ and 
+\begin_inset Formula $z=0^{l}110^{p-1}$
+\end_inset
+
+ where 
+\begin_inset Formula $l$
+\end_inset
+
+ is the remaining 
+\begin_inset Formula $0$
+\end_inset
+
+'s after we take 
+\begin_inset Formula $x$
+\end_inset
+
+and 
+\begin_inset Formula $y$
+\end_inset
+
+from it.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $0^{p}110^{p-1}=w=xyz=0^{j}0^{k}0^{l}110^{p-1}=0^{j+k+l}110^{p-1}$
+\end_inset
+
+ we can conclude that 
+\begin_inset Formula $j+k+l=p$
+\end_inset
+
+ must be true.
+\end_layout
+
+\begin_layout Proof
+However, if we choose to pump 
+\begin_inset Formula $y$
+\end_inset
+
+ down to 
+\begin_inset Formula $xy^{0}z$
+\end_inset
+
+ we get 
+\begin_inset Formula $0^{j}0^{l}110^{p-1}=0^{j+l}110^{p-1}$
+\end_inset
+
+.
+ We get that 
+\begin_inset Formula $l=p-(j+k)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $j+p-j-k=p-1$
+\end_inset
+
+ which reduces to 
+\begin_inset Formula $p-k-1=p-1$
+\end_inset
+
+ which means 
+\begin_inset Formula $k=0$
+\end_inset
+
+ but this is a contradiction so C is not a RL.
+\end_layout
+
+\begin_layout Example*
+(6) 1.46d: Prove the following language is not regular: 
+\begin_inset Formula $D=\{wtw|w,t\in\{0,1\}^{+}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Assume D is a regular language.
+ As such, there must exist a p, pumping length, st 
+\begin_inset Formula $|s|\geq p.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $s=wtw=0^{p}1110^{p}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $|s|\geq p,$
+\end_inset
+
+ we can use the Pumping Lemma to split it up into three strings: 
+\begin_inset Formula $s=xyz.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since the first P symbols are all 
+\begin_inset Formula $0$
+\end_inset
+
+'s, we know that 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ can only be 
+\begin_inset Formula $0$
+\end_inset
+
+'s and 
+\begin_inset Formula $z$
+\end_inset
+
+contains the remainder of the string.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ can have zero or more elements and 
+\begin_inset Formula $y$
+\end_inset
+
+ must have at least one element, we can write these variables as:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x=0^{j},j\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $y=0^{k},k\geq1$
+\end_inset
+
+ and 
+\begin_inset Formula $z=0^{l}1110^{p}$
+\end_inset
+
+ where 
+\begin_inset Formula $l=p-(j+k)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $0^{p}1110^{p}=s=wtw=xyz=0^{j}0^{k}0^{l}1110^{p}=0^{j+k+l}1110^{p}$
+\end_inset
+
+ we can conclude that 
+\begin_inset Formula $j+k+l=p$
+\end_inset
+
+ must be true.
+\end_layout
+
+\begin_layout Proof
+However, if we choose to pump 
+\begin_inset Formula $y$
+\end_inset
+
+ up to 
+\begin_inset Formula $xy^{3}z$
+\end_inset
+
+ we get 
+\begin_inset Formula $0^{j}0^{k}0^{k}0^{k}0^{p-(j+k)}1110^{p}=0^{j+k+k+k+p-j-k}1110^{p}=0^{p+k+k}1110^{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+This is implying that 
+\begin_inset Formula $p+k+k=p$
+\end_inset
+
+ which means 
+\begin_inset Formula $k=0$
+\end_inset
+
+ must be true, but this is a contradiction of our prior assumption
+\end_layout
+
+\begin_layout Proof
+so the language D is not regular.
+\end_layout
+
+\begin_layout Example*
+(7) 1.47: Let 
+\begin_inset Formula $\Sigma=\{1,\#\}$
+\end_inset
+
+ and let 
+\begin_inset Formula $Y=\{w|w=x_{1}\#x_{2}\#...\#x_{k},k\geq0,$
+\end_inset
+
+ each 
+\begin_inset Formula $x_{i}\in1^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}\not=x_{j},$
+\end_inset
+
+ for 
+\begin_inset Formula $i\not=j\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Assume Y is a regular language.
+ As such, there must exist a p, pumping length, st 
+\begin_inset Formula $|w|\geq p.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w=1^{p}\#1^{p+1}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $|w|\geq p,$
+\end_inset
+
+ we can use the Pumping Lemma to split it up into three strings: 
+\begin_inset Formula $w=xyz.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Since the first P symbols are all 
+\begin_inset Formula $1$
+\end_inset
+
+'s, we know that 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ can only be 
+\begin_inset Formula $1$
+\end_inset
+
+'s and 
+\begin_inset Formula $z$
+\end_inset
+
+contains the remainder of the string.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ can have zero or more elements and 
+\begin_inset Formula $y$
+\end_inset
+
+ must have at least one element, we can write these variables as:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x=1^{j},j\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $y=1^{k},k\geq1$
+\end_inset
+
+ and 
+\begin_inset Formula $z=1^{l}\#1^{p+1}$
+\end_inset
+
+ where 
+\begin_inset Formula $l=p-(j+k).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $1^{p}\#1^{p+1}=w=xyz=1^{j}1^{k}1^{l}\#1^{p+1}=1^{j+k+l}\#1^{p+1}$
+\end_inset
+
+ we can conclude that 
+\begin_inset Formula $j+k+l=p$
+\end_inset
+
+ must be true.
+\end_layout
+
+\begin_layout Proof
+However, if we choose to pump 
+\begin_inset Formula $y$
+\end_inset
+
+ up to 
+\begin_inset Formula $xy^{2}z$
+\end_inset
+
+ we get 
+\begin_inset Formula $1^{j}1^{k}1^{k}1^{p-(j+k)}\#1^{p+1}=1^{j+k+k+p-j-k}\#1^{p+1}=1^{p+k}\#1^{p+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+To get back the original assumption, the exponent of the first is one less
+ than the exponent of the last one, so we add one to it
+\end_layout
+
+\begin_layout Proof
+to counteract any changes and check for comparison.
+ 
+\begin_inset Formula $p+k+1=p+1$
+\end_inset
+
+ which means 
+\begin_inset Formula $k=0$
+\end_inset
+
+ but that contradicts the PL so
+\end_layout
+
+\begin_layout Proof
+Y is not a regular language.
+\end_layout
+
+\begin_layout Example*
+(8) 1.49b: Let 
+\begin_inset Formula $C=\{1^{k}y|y\in\{0,1\}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ contains at most 
+\begin_inset Formula $k$
+\end_inset
+
+1s, for 
+\begin_inset Formula $k\geq1\}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Assume C is a regular language.
+ As such, there must exist a p, pumping length, st 
+\begin_inset Formula $|w|\geq p.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w=1^{p}01^{p}.$
+\end_inset
+
+ Since 
+\begin_inset Formula $|w|\geq p,$
+\end_inset
+
+ we can use the Pumping Lemma to split it up into three strings: 
+\begin_inset Formula $w=xyz.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Since the first P symbols are all 
+\begin_inset Formula $1$
+\end_inset
+
+'s, we know that 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ can only be 
+\begin_inset Formula $1$
+\end_inset
+
+'s and 
+\begin_inset Formula $z$
+\end_inset
+
+contains the remainder of the string.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ can have zero or more elements and 
+\begin_inset Formula $y$
+\end_inset
+
+ must have at least one element, we can write these variables as:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x=1^{j},j\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $y=1^{k},k\geq1$
+\end_inset
+
+ and 
+\begin_inset Formula $z=1^{p-(j+k)}01^{p}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Proof
+If we choose to pump 
+\begin_inset Formula $y$
+\end_inset
+
+ down and get 
+\begin_inset Formula $xy^{0}z=1^{j}1^{p-(j+k)}01^{p}=1^{j+p-j-k}01^{p}=1^{p-k}01^{p}$
+\end_inset
+
+ we'd get 
+\begin_inset Formula $p-k=p$
+\end_inset
+
+ but 
+\begin_inset Formula $k\not=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+so we get a contradiction and C cannot be a regular language.
+\end_layout
+
+\begin_layout Example*
+(9) Show that 
+\begin_inset Formula $X=\{0^{n}1^{m}2^{k}|k$
+\end_inset
+
+ divides 
+\begin_inset Formula $n+m\}$
+\end_inset
+
+ is not regular.
+\end_layout
+
+\begin_layout Proof
+Assume X is a regular language.
+ As such, there must exist a p, pumping length, st 
+\begin_inset Formula $|w|\geq p.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w=0^{p}1^{0}2^{p}.$
+\end_inset
+
+ Since 
+\begin_inset Formula $|w|\geq p,$
+\end_inset
+
+ we can use the Pumping Lemma to split it up into three strings: 
+\begin_inset Formula $w=xyz.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Since the first P symbols are all 
+\begin_inset Formula $0$
+\end_inset
+
+'s, we know that 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ can only be 
+\begin_inset Formula $0$
+\end_inset
+
+'s and 
+\begin_inset Formula $z$
+\end_inset
+
+contains the remainder of the string.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ can have zero or more elements and 
+\begin_inset Formula $y$
+\end_inset
+
+ must have at least one element, we can write these variables as:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x=0^{j},j\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $y=0^{k},k\geq1$
+\end_inset
+
+ and 
+\begin_inset Formula $z=0^{p-(j+k)}1^{0}2^{p}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+So we now have 
+\begin_inset Formula $w=0^{p}1^{0}2^{p}=xyz=0^{j}0^{k}0^{p-(j+k)}1^{0}2^{p}=0^{j+k+p-j-k}1^{0}2^{p}=0^{p}1^{0}2^{p}$
+\end_inset
+
+ which holds true still.
+\end_layout
+
+\begin_layout Proof
+If we choose to pump 
+\begin_inset Formula $y$
+\end_inset
+
+ down and get 
+\begin_inset Formula $xy^{0}z=0^{j}0^{p-(j+k)}1^{0}2^{p}=0^{j+p-j-k}1^{0}2^{p}=0^{p-k}1^{0}2^{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+However, 
+\begin_inset Formula $p-k=p$
+\end_inset
+
+ but 
+\begin_inset Formula $k\not=0$
+\end_inset
+
+ so there is a contradiction.
+ Thus, X is not a regular language.
+\end_layout
+
+\begin_layout Example*
+(10): Convert from NFA to DFA:
+\end_layout
+
+\begin_layout Example*
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+STATE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+INPUT(0)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+INPUT(1)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+1,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,4,6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+2,4,6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+2,4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+3,4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,4,6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,4,6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ Bold = Accept state
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,879 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Zachary Halpern – Homework #1
+\end_layout
+
+\begin_layout Proposition
+Prove or disprove 
+\begin_inset Formula $\sum_{i=1}^{n}(n+i)^{2}=\dfrac{n(2n+1)(7n+1)}{6}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Proof by induction.
+\end_layout
+
+\begin_layout Proof
+Base case of 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sum_{i=1}^{1}(n+i)^{2}=(1+1)^{2}=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\dfrac{1(2(1)+1)(7(1)+1)}{6}=\dfrac{1(3)(8)}{6}=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Base case is true.
+\end_layout
+
+\begin_layout Proof
+Induction case: Suppose 
+\begin_inset Formula $\sum_{i=1}^{n}(n+i)^{2}=\dfrac{n(2n+1)(7n+1)}{6}$
+\end_inset
+
+ for all n.
+\end_layout
+
+\begin_layout Proof
+NTS 
+\begin_inset Formula $n+1$
+\end_inset
+
+ is true.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sum_{i=1}^{n+1}(n+1+i)^{2}=\sum_{i=1}^{n}(n+1+i)^{2}+\sum_{i=n+1}^{n+1}(n+1+i)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sum_{i=1}^{n}(n+1+i)^{2}=\sum_{i=1}^{n}(n^{2}+n+in+n+1+i+ni+i+i^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\sum_{i=1}^{n}(n^{2}+2n+2in+2i+i^{2}+1)+\sum_{i=n+1}^{n+1}(n+1+i)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So now we can rewrite the summation as
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\sum_{i=1}^{n}(n+i)^{2}+\sum_{i=1}^{n}(2n+2i+1)+\sum_{i=n+1}^{n+1}(n+1+i)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\sum_{i=1}^{n}(n+i)^{2}+\sum_{i=1}^{n}2n+\sum_{i=1}^{n}2i+\sum_{i=1}^{n}1+\sum_{i=n+1}^{n+1}(n+1+i)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\dfrac{n(2n+1)(7n+1)}{6}+2n^{2}+n(n+1)+n+(2n+2)^{2}$
+\end_inset
+
+ via Induction Hypothesis.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\dfrac{n(2n+1)(7n+1)}{6}+7n^{2}+10n+4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\dfrac{14n^{3}+51n^{2}+61n+24}{6}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Checking the original equation...
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\dfrac{(n+1)(2n+3)(7n+8)}{6}=\dfrac{(2n^{2}+5n+3)(7n+8)}{6}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\dfrac{14n^{3}+16n^{2}+35n^{2}+40n+21n+24}{6}=\dfrac{14n^{3}+51n^{2}+61n+24}{6}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+Prove or disprove 
+\begin_inset Formula $\sum_{i=0}^{n}(2i)^{4}\leq(4n)^{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Disproven by counter example.
+\end_layout
+
+\begin_layout Proof
+Case 
+\begin_inset Formula $n=77$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sum_{i=0}^{77}(2i)^{4}\leq(4(77))^{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $8,945,368,432\leq8,999,178,496$
+\end_inset
+
+ is true.
+\end_layout
+
+\begin_layout Proof
+Case 
+\begin_inset Formula $n=78$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sum_{i=0}^{78}(2i)^{4}\leq(4(78))^{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $9,537,609,328\leq9,475,854,336$
+\end_inset
+
+ is false.
+\end_layout
+
+\begin_layout Proposition
+Prove or disprove 
+\begin_inset Formula $\sum_{i=1}^{n}\dfrac{1}{(2i-1)(2i+1)}=\dfrac{n}{2n+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Proof by induction.
+\end_layout
+
+\begin_layout Proof
+Base case 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sum_{i=1}^{1}\dfrac{1}{(2i-1)(2i+1)}=\dfrac{1}{(1)(3)}=\dfrac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\dfrac{1}{2(1)+1}=\dfrac{1}{3}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Base case is true.
+\end_layout
+
+\begin_layout Proof
+Induction case: Suppose 
+\begin_inset Formula $\sum_{i=1}^{n}\dfrac{1}{(2i-1)(2i+1)}=\dfrac{n}{2n+1}$
+\end_inset
+
+ is true for all n.
+\end_layout
+
+\begin_layout Proof
+NTS 
+\begin_inset Formula $n+1$
+\end_inset
+
+ is true.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sum_{i=1}^{n+1}\dfrac{1}{(2i-1)(2i+1)}=\sum_{i=1}^{n}\dfrac{1}{(2i-1)(2i+1)}+\sum_{i=n+1}^{n+1}\dfrac{1}{(2i-1)(2i+1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\dfrac{n}{2n+1}+\dfrac{1}{(2(n+1)-1)(2(n+1)+1)}$
+\end_inset
+
+ via Induction Hypothesis.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\dfrac{n}{2n+1}+\dfrac{1}{(2n+1)(2n+3)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\dfrac{2n^{2}+3n+1}{(2n+1)(2n+3)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\dfrac{(2n+1)(n+1)}{(2n+1)(2n+3)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\dfrac{n+1}{2n+3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Compared to the original equation...
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\dfrac{(n+1)}{2(n+1)+1}=\dfrac{n+1}{2n+3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+Prove 
+\begin_inset Formula $m^{n}-1\vert m-1$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $m\geq2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Proof by induction.
+\end_layout
+
+\begin_layout Proof
+Base case 
+\begin_inset Formula $m=2$
+\end_inset
+
+ and 
+\begin_inset Formula $n\geq0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $2^{n}-1\vert1$
+\end_inset
+
+ is true because 1 divides any number.
+\end_layout
+
+\begin_layout Proof
+Base case 
+\begin_inset Formula $m\geq2$
+\end_inset
+
+ and 
+\begin_inset Formula $n=0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $m^{0}-1\vert m-1$
+\end_inset
+
+ is true because any number can divide 0.
+\end_layout
+
+\begin_layout Proof
+Induction case: 
+\begin_inset Formula $m^{n}-1|m-1$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+NTS True for m+1 then n+1
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(m+1)^{n}-1\vert(m+1)-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(m+1)^{n}-1\vert m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $n=1$
+\end_inset
+
+, 
+\begin_inset Formula $m|m$
+\end_inset
+
+ which is true as a number can divide itself.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $m^{n+1}-1\vert m-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $m=3$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $3^{n+1}-1|2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $3^{n+1}|3$
+\end_inset
+
+ which is true as 3 can divide a multiple of 3.
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $m=4$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $4^{n+1}-1|3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $4^{n+1}|4$
+\end_inset
+
+ which is true as 4 can divide a multiple of 4.
+ 
+\end_layout
+
+\begin_layout Proposition
+Let 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ w/ 
+\begin_inset Formula $|V|\geq2$
+\end_inset
+
+.
+ Prove G has two verticies w/ same degree.
+\end_layout
+
+\begin_layout Proof
+Consider a single vertex that has degree 
+\begin_inset Formula $V-1$
+\end_inset
+
+.
+ Since all of the other nodes are connected to this vertex, they have to
+ have a degree of at least one.
+\end_layout
+
+\begin_layout Proof
+Thus, the possible degrees of any vertex consist of 
+\begin_inset Formula $1,2,...,V-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since we have V total vertexes and there are 
+\begin_inset Formula $V-1$
+\end_inset
+
+ possible degrees, the pigeonhole principle says that at least two verticies
+ have the same degree.
+\end_layout
+
+\begin_layout Proposition*
+7: 
+\begin_inset Formula $f:Z\to Z$
+\end_inset
+
+ by 
+\begin_inset Formula $f(n)=3n-1$
+\end_inset
+
+, 
+\begin_inset Formula $g:Q\to Q$
+\end_inset
+
+ 
+\begin_inset Formula $g(x)=\dfrac{x}{5}+1$
+\end_inset
+
+, 
+\begin_inset Formula $h:N\cup\{0\}\to N\cup\{0\}$
+\end_inset
+
+ 
+\begin_inset Formula $h(n)=\dfrac{n}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+a) f is NOT onto because f(n) can not equal 1 from the intergers.
+\end_layout
+
+\begin_layout Proof
+b) f is one-to-one because there is a unique result for every input.
+\end_layout
+
+\begin_layout Proof
+c) f has a range of the integers.
+\end_layout
+
+\begin_layout Proof
+d) g is onto.
+ Proof: For every element in the rational numbers, there is an 
+\begin_inset Formula $x$
+\end_inset
+
+ we can insert into 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ to obtain that value.
+\end_layout
+
+\begin_layout Proof
+e) g is one-to-one.
+ Proof: if 
+\begin_inset Formula $g(x_{1})=g(x_{2})$
+\end_inset
+
+ then 
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+ must be true.
+ Suppose 
+\begin_inset Formula $g(x_{1})=g(x_{2})$
+\end_inset
+
+ for some 
+\begin_inset Formula $x_{1},x_{2}\in Q$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\dfrac{x_{1}}{5}+1=\dfrac{x_{2}}{5}+1$
+\end_inset
+
+.
+ We can reduce this down to 
+\begin_inset Formula $\dfrac{x_{1}}{5}=\dfrac{x_{2}}{5}$
+\end_inset
+
+ and multiply both sides to get 
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+ proving that this function is one-to-one.
+\end_layout
+
+\begin_layout Proof
+f) h is onto because all values in the Naturals plus zero get hit for some
+ value of n.
+\end_layout
+
+\begin_layout Proof
+g) h is NOT one-to-one because where n = 0 and n = 1 the result is the same
+ (zero).
+\end_layout
+
+\begin_layout Proposition*
+8: Let A be the set {x,y,z} and B is the set {x,y}
+\end_layout
+
+\begin_layout Proposition*
+a) Is A a subset of B?
+\end_layout
+
+\begin_layout Proposition*
+A is NOT a subset of B.
+\end_layout
+
+\begin_layout Proposition*
+b) Is B a subset of A?
+\end_layout
+
+\begin_layout Proposition*
+B IS a subset of A.
+\end_layout
+
+\begin_layout Proposition*
+c) What is 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula ${\{x,y,z}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+d) What is 
+\begin_inset Formula $A\cap B$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula ${\{x,y}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+e) What is 
+\begin_inset Formula $A\times B$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula $\{{(x,x),(x,y),(y,x),(y,y),(z,x),(z,y)}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+f) What is the power series of B?
+\end_layout
+
+\begin_layout Proposition*
+\begin_inset Formula $\{\{\emptyset\},\{x\},\{y\},\{x,y\}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+9: Expalin the problem w/ proof in problem 0.12.
+\end_layout
+
+\begin_layout Proposition*
+The base case is wrong in this instance because you need a set of two horses
+ in order to make such a claim.
+\end_layout
+
+\begin_layout Proposition*
+If your base case was 2, then you added a 3rd horse and removed one of the
+ first two, the initial base case holds up for
+\end_layout
+
+\begin_layout Proposition*
+all values >= 2.
+ Claiming something with only one object is not sufficient to use induction.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+10: Let n be a natural number.
+ Prove the intergers modulo n form an equiv relation on the naturals.
+\end_layout
+
+\begin_layout Proof
+a) 
+\begin_inset Formula $a\equiv a$
+\end_inset
+
+ mod n means that n divides 
+\begin_inset Formula $a-a=0$
+\end_inset
+
+, (i.e.
+ 0/anything = 0) which we know to be true, so 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ is reflexive.
+\end_layout
+
+\begin_layout Proof
+b) Assume 
+\begin_inset Formula $a\equiv b$
+\end_inset
+
+ mod n, then we know there exists a 
+\begin_inset Formula $j\in Z$
+\end_inset
+
+ such that 
+\begin_inset Formula $a-b=jn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We also know that 
+\begin_inset Formula $b-a=-jn$
+\end_inset
+
+, which is also divisible by n so 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ is symmetric.
+\end_layout
+
+\begin_layout Proof
+c) Assume 
+\begin_inset Formula $a\equiv b$
+\end_inset
+
+ and 
+\begin_inset Formula $b\equiv c$
+\end_inset
+
+, which means n divides both 
+\begin_inset Formula $a-b$
+\end_inset
+
+ and 
+\begin_inset Formula $b-c$
+\end_inset
+
+.
+ So there exists integers j and k st
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $a-b=jn$
+\end_inset
+
+ and 
+\begin_inset Formula $b-c=kn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We can now do 
+\begin_inset Formula $a-c=(a-b)+(b-c)=jn+kn=(j+k)n$
+\end_inset
+
+ which proves that 
+\begin_inset Formula $a-c$
+\end_inset
+
+ is divisible by n.
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ is transitive.
+\end_layout
+
+\end_body
+\end_document
