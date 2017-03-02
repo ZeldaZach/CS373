@@ -231,6 +231,17 @@ But
  so this is not a regular language.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+t
+\end_layout
+
 \begin_layout Example*
 (4) 1.46a: Prove the following languages are not regular: 
 \begin_inset Formula $A=\{0^{n}1^{m}0^{n}|m,n\geq0\}$
