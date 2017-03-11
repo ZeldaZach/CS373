@@ -231,17 +231,6 @@ But
  so this is not a regular language.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-t
-\end_layout
-
 \begin_layout Example*
 (4) 1.46a: Prove the following languages are not regular: 
 \begin_inset Formula $A=\{0^{n}1^{m}0^{n}|m,n\geq0\}$
@@ -382,6 +371,72 @@ But
 
  so this is not a regular language.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Assume A is a regular language.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $s=0^{p}10^{p}.$
+\end_inset
+
+ Since 
+\begin_inset Formula $|s|\geq p,s=xyz$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $|xy|\leq p,|y|>0,xy^{i}z\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x=0^{a},y=0^{b},z=0^{p-(a+b)}10^{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $0<b\leq p,0\leq a<p$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $xy^{2}z=0^{a}0^{2b}10^{p}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $p+b=p$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $b\not=0,$
+\end_inset
+
+ so contradiction and A is not a RL.
 \end_layout
 
 \begin_layout Example*
@@ -939,6 +994,17 @@ If we choose to pump
 
 \begin_layout Proof
 so we get a contradiction and C cannot be a regular language.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Is regular; 1(11101) = 1y , y = 11101 RE for this lang = 10*1(0U1)*
 \end_layout
 
 \begin_layout Example*
