@@ -1,0 +1,1102 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Zachary Halpern – Homework #7
+\end_layout
+
+\begin_layout Example*
+(2) 2.14: Convert the following CFG into Chomsky normal form:
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $\begin{cases}
+A\to & BAB|B|\epsilon\\
+B\to & 00|\epsilon
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+To start:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{cases}
+A\to & BAB|B|\epsilon\\
+B\to & 00|\epsilon
+\end{cases}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+We can change the language up a bit to be
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{cases}
+S\to & A\\
+A\to & BAB|B|\epsilon\\
+B\to & 00|\epsilon
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{cases}
+S\to & A|BAB|B|BB|\epsilon\\
+A\to & BAB|B|BB\\
+B\to & 00|\epsilon
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{cases}
+S\to & A|BAB|B|AB|BA|BB|\epsilon\\
+A\to & BAB|B|AB|BA|BB\\
+B\to & B'B'\\
+B'\to & 0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{cases}
+S\to & B'B'|BC|AB|BA|BB|\epsilon\\
+A\to & BC|B'B'|AB|BA|BB\\
+B\to & B'B'\\
+B'\to & 0\\
+C\to & AB
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+(3): Show class of context free languages is closed under union.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $G_{U}=(V_{1}\cup V_{2}\cup\{S\},\Sigma,R_{1}\cup R_{2}\cup\{S\to S_{1}|S_{2}\},S)$
+\end_inset
+
+ where 
+\begin_inset Formula $G_{1}=(V_{1},\Sigma,R_{1},S_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{2}=(V_{2},\Sigma,R_{2},S_{2})$
+\end_inset
+
+ and all three of these are context free grammars.
+ We assume that the rules and variables of 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ are disjoint.
+ NTS 
+\begin_inset Formula $L(G_{U})=L(G_{1})\cup L(G_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w\in L(G_{U})$
+\end_inset
+
+.
+ Then we know there exists a way to get from 
+\begin_inset Formula $S\implies w$
+\end_inset
+
+ because S will break into either S1 or S2, which either 
+\begin_inset Formula $S_{1}\implies w$
+\end_inset
+
+ or 
+\begin_inset Formula $S_{2}\implies w.$
+\end_inset
+
+ This means that 
+\begin_inset Formula $w\in L(G_{1})$
+\end_inset
+
+ or 
+\begin_inset Formula $w\in L(G_{2})$
+\end_inset
+
+ which means 
+\begin_inset Formula $w\in L(G_{1})\cup L(G_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w\in L(G_{1})\cup L(G_{2})$
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula $w\in L(G_{1})$
+\end_inset
+
+ and/or 
+\begin_inset Formula $w\in L(G_{2}).$
+\end_inset
+
+ If 
+\begin_inset Formula $w\in L(G_{1})$
+\end_inset
+
+ then we can get a derivation w through 
+\begin_inset Formula $S_{1}\implies w$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $w\in L(G_{2})$
+\end_inset
+
+ then we can get a derivation w through 
+\begin_inset Formula $S_{2}\implies w.$
+\end_inset
+
+ In both cases, we can rewrite this derivation as 
+\begin_inset Formula $S\implies S_{1}\implies w$
+\end_inset
+
+ and/or 
+\begin_inset Formula $S\implies S_{2}\implies w$
+\end_inset
+
+.
+ Since S derives w no matter which language it's in, 
+\begin_inset Formula $w\in L(G_{U}).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Example*
+(4): Show that the class of context free languages is closed under concatenation.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $G_{C}=(V_{1}\cup V_{2}\cup\{S\},\Sigma_{1}\cup\Sigma_{2},R_{1}\cup R_{2}\cup\{S\to S_{1}S_{2}\},S)$
+\end_inset
+
+ where 
+\begin_inset Formula $G_{1}=(V_{1},\Sigma_{1},R_{1},S_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{2}=(V_{2},\Sigma_{2},R_{2},S_{2})$
+\end_inset
+
+ and all three of these are context free grammars.
+ NTS 
+\begin_inset Formula $L(G_{C})=L(G_{1})L(G_{2}).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w\in L(G_{C}).$
+\end_inset
+
+ Then we know there exists a way to get from 
+\begin_inset Formula $S\implies w$
+\end_inset
+
+.
+ In order for us to get a result, we must pass through both 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ followed by 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ in order to get a valid result.
+ This means that 
+\begin_inset Formula $S\implies S_{1}\implies S_{2}\implies w$
+\end_inset
+
+ must hold for 
+\begin_inset Formula $w\in L(G_{C})$
+\end_inset
+
+.
+ Because of this, we know that 
+\begin_inset Formula $L(G_{C})=L(G_{1})L(G_{2}).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w\in L(G_{1})L(G_{2}).$
+\end_inset
+
+ This means that in order for w to be accepted, the result from 
+\begin_inset Formula $L(G_{1})$
+\end_inset
+
+ must be passed to 
+\begin_inset Formula $L(G_{2})$
+\end_inset
+
+ and produce 
+\begin_inset Formula $w.$
+\end_inset
+
+ We know that 
+\begin_inset Formula $S\to S_{1}S_{2}$
+\end_inset
+
+ where 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ will get us the result from 
+\begin_inset Formula $L(G_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ will get us the result from 
+\begin_inset Formula $L(G_{2})$
+\end_inset
+
+.
+ We can write this as a full derivation as 
+\begin_inset Formula $S\implies S_{1}\implies S_{2}\implies w$
+\end_inset
+
+, so this means that 
+\begin_inset Formula $L(G_{C})=L(G_{1})L(G_{2})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example*
+(5): Show that the class of context free languages is closed under star.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $G_{S}=(V_{1}\cup\{S\},\Sigma,R_{1}\cup\{S\to S_{1}S|\epsilon\},S)$
+\end_inset
+
+ where 
+\begin_inset Formula $G_{1}=(V_{1},\Sigma,R_{1},S_{1})$
+\end_inset
+
+.
+ Suppose both of these are context free grammars.
+ NTS 
+\begin_inset Formula $L(G_{S})=L(G_{1})^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w\in L(G_{S}).$
+\end_inset
+
+ We know that there is a way to get from 
+\begin_inset Formula $S\implies w.$
+\end_inset
+
+ In order to do this, we must pass through 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ an arbitrary number of times to get a valid result.
+ This means that 
+\begin_inset Formula $S\implies S_{1}\implies S_{1}\implies...\implies S_{1}\implies w$
+\end_inset
+
+.
+ Since we can do this any number of times, including zero times, w has to
+ be apart of 
+\begin_inset Formula $L(G_{1})^{*}$
+\end_inset
+
+ and thus 
+\begin_inset Formula $L(G_{S})=L(G_{1})^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w\in L(G_{1})^{*}.$
+\end_inset
+
+ This means that in order for w to be accepted, w must pass through 
+\begin_inset Formula $L(G_{1})^{*}$
+\end_inset
+
+ an arbitrary number of times.
+ This means that we can go 
+\begin_inset Formula $S_{1}\implies S_{1}\implies...\implies S_{1}\implies w$
+\end_inset
+
+.
+ If we append a new start state that calls 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ an arbitrary number of times, then the languages must be equal.
+ Thus 
+\begin_inset Formula $L(G_{S})=L(G_{1})^{*}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+(6): Prove 
+\begin_inset Formula $L(M)=L(G)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+Let 
+\begin_inset Formula $M=(Q,\Sigma,\delta,q_{0},F)$
+\end_inset
+
+ be a DFA and define 
+\begin_inset Formula $G=(V,\Sigma,R,S)$
+\end_inset
+
+ to be a CFG where
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $V=Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $\forall q\in Q\&a\in\Sigma,$
+\end_inset
+
+ define rule 
+\begin_inset Formula $q\to aq'$
+\end_inset
+
+ where 
+\begin_inset Formula $q'=\delta(q,a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+For 
+\begin_inset Formula $q\in F,$
+\end_inset
+
+ define rule 
+\begin_inset Formula $q\to\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $S=q_{0}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+For any string w that is accepted by M, and thus in L(M), there must be
+ a series of transitions, T, such that 
+\begin_inset Formula $T=(Q_{0}Q_{1}...Q_{n})$
+\end_inset
+
+ where 
+\begin_inset Formula $Q_{0}=$
+\end_inset
+
+ start state and 
+\begin_inset Formula $Q_{n}=$
+\end_inset
+
+ an accept state.
+ In addition, the delta transitions would be defined as 
+\begin_inset Formula $Q_{i+1}=\delta(Q_{i},w_{i+1})$
+\end_inset
+
+.
+ To see if w is accepted in the grammar, there can be a set of rules such
+ that 
+\begin_inset Formula $q_{i+1}=\delta(q_{i},w_{i+1})$
+\end_inset
+
+ which means that for all inputs, starting with 
+\begin_inset Formula $q_{0}=w_{0}$
+\end_inset
+
+ we get the transitions of 
+\begin_inset Formula $w_{0}Q_{1}\to w_{0}w_{1}Q_{2}\to...\to w_{0}w_{1}...w_{n-1}Q_{n}=w$
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula $L(M)\subseteq L(G).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+For any string w that is accepted by G, and thus in L(G), there must be
+ a series of rules, R, such that 
+\begin_inset Formula $R=(Q_{0}Q_{1}...Q_{n})$
+\end_inset
+
+ where 
+\begin_inset Formula $S=Q_{0}$
+\end_inset
+
+ and is accepted when it hits an epsilon.
+ We can define a DFA that follows this set of variables, and we can call
+ them the states of the DFA.
+ As such, the states are equal to the variables, the start state is the
+ first rule from R, the accept state is defined as the transition to the
+ epsilon, and each state will create the delta to be 
+\begin_inset Formula $Q_{i+1}=\delta(Q_{i},w_{i+1})$
+\end_inset
+
+ which makes 
+\begin_inset Formula $L(G)\subset L(M)$
+\end_inset
+
+.
+ Hence forth, 
+\begin_inset Formula $L(G)=L(M).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+(7): Let 
+\begin_inset Formula $L=\{0^{N}1^{M}0^{N}1^{M}|N,M\geq0\}.$
+\end_inset
+
+ Show L is not context free.
+\end_layout
+
+\begin_layout Proof
+Suppose L is a context free language.
+ Then there exists a p, pumping length, that for all strings 
+\begin_inset Formula $w\in L$
+\end_inset
+
+ and 
+\begin_inset Formula $|w|\geq p$
+\end_inset
+
+ we have
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $w=uvxyz$
+\end_inset
+
+ where 
+\begin_inset Formula $|vxy|\leq p,$
+\end_inset
+
+ 
+\begin_inset Formula $|vy|>0,$
+\end_inset
+
+ and 
+\begin_inset Formula $uv^{I}xy^{I}z\in L,\forall i\in\mathbb{{N}}\cup0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w=0^{P}1^{P}0^{P}1^{P}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $|vxy|\leq p,$
+\end_inset
+
+ 
+\begin_inset Formula $vxy\in0^{P},0^{P}1^{P},1^{P},1^{P}0^{P},0^{P},0^{P}1^{P},1^{P}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+7 case options:
+\end_layout
+
+\begin_layout Proof
+1) 
+\begin_inset Formula $vxy\in0^{P}\to|vy|>0$
+\end_inset
+
+.
+ If we pump 
+\begin_inset Formula $v$
+\end_inset
+
+ or 
+\begin_inset Formula $y$
+\end_inset
+
+ up there are too many 0s to start the string compared to the next set of
+ 0s to follow.
+ (
+\begin_inset Formula $w'=0^{P+X}1^{P}0^{P}1^{P},X\not=0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $vxy\in0^{P}1^{P}.$
+\end_inset
+
+ 
+\begin_inset Formula $vy$
+\end_inset
+
+ contains 0s and 1s, pumping down gives too few zeros/ones compared to the
+ rest of the string.
+ (
+\begin_inset Formula $w'=0^{P-X}1^{P-Y}0^{P}1^{P},(XorY\not=0)$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+3) 
+\begin_inset Formula $vxy\in1^{P}.$
+\end_inset
+
+ 
+\begin_inset Formula $vy$
+\end_inset
+
+ contains 1s, so if we pump it up then there are too many 1s compared to
+ the end of the string.
+ (
+\begin_inset Formula $w'=0^{P}1^{P+X}0^{P}1^{P},X\not=0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+4) 
+\begin_inset Formula $vxy\in1^{P}0^{P}.$
+\end_inset
+
+ 
+\begin_inset Formula $vy$
+\end_inset
+
+ contains 1s and 0s, pumping down causes fewer 0s and/or 1s compared to
+ the rest of the string.
+ (
+\begin_inset Formula $w'=0^{P}1^{P-X}0^{P-Y}1^{P},(XorY\not=0)$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+5) 
+\begin_inset Formula $vxy\in0^{P}.$
+\end_inset
+
+ 
+\begin_inset Formula $vy$
+\end_inset
+
+ contains 0s, so if we pump up then there are too many 0s then compared
+ to the start of the string.
+ (
+\begin_inset Formula $w'=0^{P}1^{P}0^{P+X}1^{P},X\not=0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+6) 
+\begin_inset Formula $vxy\in0^{P}1^{P}.$
+\end_inset
+
+ 
+\begin_inset Formula $vy$
+\end_inset
+
+ contains 0s and 1s, so if we pump down then there aren't enough 0s/1s compared
+ to the start of the string.
+ (
+\begin_inset Formula $w'=0^{P}1^{P}0^{P-X}1^{P-Y},(XorY\not=0)$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+7) 
+\begin_inset Formula $vxy\in1^{P}.$
+\end_inset
+
+ 
+\begin_inset Formula $vy$
+\end_inset
+
+ contains 1s, so if we pump up then there are too many 1s at the end of
+ the string compared to the rest.
+ (
+\begin_inset Formula $w'=0^{P}1^{P}0^{P}1^{P+X},X\not=0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+Since this string fails all case options, L is not a context free language.
+\end_layout
+
+\begin_layout Example*
+(8): Let 
+\begin_inset Formula $L=\{w|w\in\{a,b,c,d\}^{*}$
+\end_inset
+
+ a's=b's, c's=d's}.
+ Show L is not context free.
+\end_layout
+
+\begin_layout Proof
+Suppose L is a context free language.
+ Then there exists a p, pumping length, that for all strings 
+\begin_inset Formula $w\in L$
+\end_inset
+
+ and 
+\begin_inset Formula $|w|\geq p$
+\end_inset
+
+ we have
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $w=uvxyz$
+\end_inset
+
+ where 
+\begin_inset Formula $|vxy|\leq p,$
+\end_inset
+
+ 
+\begin_inset Formula $|vy|>0,$
+\end_inset
+
+ and 
+\begin_inset Formula $uv^{I}xy^{I}z\in L,\forall i\in\mathbb{{N}}\cup0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w=a^{P}c^{P}b^{P}d^{P}.$
+\end_inset
+
+ For 
+\begin_inset Formula $|vxy|\leq p,vxy\in a^{p},a^{p}c^{p},c^{p},c^{p}b^{p},b^{p},b^{p}d^{p},d^{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+7 case options:
+\end_layout
+
+\begin_layout Proof
+1) 
+\begin_inset Formula $vxy\in a^{P}.$
+\end_inset
+
+ If we pump v or y up we get 
+\begin_inset Formula $w'=a^{P+X}c^{P}b^{P}d^{P},X\not=0$
+\end_inset
+
+ but this has too many a's compared to b's.
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $vxy\in a^{P}c^{P}.$
+\end_inset
+
+ If we pump v or y down we get 
+\begin_inset Formula $w'=a^{P-X}c^{P-Y}b^{P}d^{P},(XorY\not=0)$
+\end_inset
+
+ which causes too few a's and/or c's compared to b's/d's.
+\end_layout
+
+\begin_layout Proof
+3) 
+\begin_inset Formula $vxy\in c^{P}$
+\end_inset
+
+.
+ If we pump v or y up, we get 
+\begin_inset Formula $w'=a^{P}c^{P+X}b^{P}d^{P},X\not=0$
+\end_inset
+
+ which causes too many c's compared to a's.
+\end_layout
+
+\begin_layout Proof
+4) 
+\begin_inset Formula $vxy\in c^{P}b^{P}.$
+\end_inset
+
+ If we pump v or y down, we get 
+\begin_inset Formula $w'=a^{P}c^{P-X}b^{P-Y}d^{P},(XorY\not=0)$
+\end_inset
+
+ which causes too many a's and/or d's compared to b's/c's.
+\end_layout
+
+\begin_layout Proof
+5) 
+\begin_inset Formula $vxy\in b^{P}.$
+\end_inset
+
+ If we pump v or y up we get 
+\begin_inset Formula $w'=a^{P}c^{P}b^{P+X}d^{P},X\not=0$
+\end_inset
+
+ which causes too many b's compared to a's.
+\end_layout
+
+\begin_layout Proof
+6) 
+\begin_inset Formula $vxy\in b^{P}d^{P}.$
+\end_inset
+
+ If we pump v or y down, we get 
+\begin_inset Formula $w'=a^{P}c^{P}b^{P-X}d^{P-Y},(XorY\not=0)$
+\end_inset
+
+ which causes too many a's and/or c's compared to b's/d's.
+\end_layout
+
+\begin_layout Proof
+7) 
+\begin_inset Formula $vxy\in d^{P}.$
+\end_inset
+
+ IF we pump v or y up, we get 
+\begin_inset Formula $w'=a^{P}c^{P}b^{P}d^{P+X},X\not=0$
+\end_inset
+
+ which causes too many d's compared to a's.
+\end_layout
+
+\begin_layout Proof
+Since this string fails all case options, L is not a context free language.
+\end_layout
+
+\begin_layout Example*
+(9): Let A and B be languages.
+ We define 
+\begin_inset Formula $A≈B$
+\end_inset
+
+ = { ab | a is an element of A and b is an element of B and 
+\begin_inset Formula $|a|>|b|$
+\end_inset
+
+ }.
+ Show that if A and B are regular languages, then 
+\begin_inset Formula $A≈B$
+\end_inset
+
+ is a context free language.
+\end_layout
+
+\begin_layout Proof
+Since A and B are regular languages, the concatination of a subset of the
+ language is a regular language.
+ Thus, 
+\begin_inset Formula $A\text{≈}B$
+\end_inset
+
+ is a regular language.
+ We know that can also be represented as a context free language, so therefore
+ 
+\begin_inset Formula $A\text{≈}B$
+\end_inset
+
+ is a context free language.
+\end_layout
+
+\begin_layout Proof
+Define a PDA, 
+\begin_inset Formula $M=(Q,\Sigma,\Gamma,\delta,q_{0},F)$
+\end_inset
+
+ that would do 
+\begin_inset Formula $A≈B$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example*
+(10): Show L = { w | w is an element of {a, b, c, d, e, f}* such that the
+ number of a's + number of b's = number of c's + number of d's = number
+ of e's + number of f's } is not context free.
+\end_layout
+
+\begin_layout Proof
+Suppose L is a context free language.
+ Then there exists a p, pumping length, that for all strings 
+\begin_inset Formula $w\in L$
+\end_inset
+
+ and 
+\begin_inset Formula $|w|\geq p$
+\end_inset
+
+ we have
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $w=uvxyz$
+\end_inset
+
+ where 
+\begin_inset Formula $|vxy|\leq p,$
+\end_inset
+
+ 
+\begin_inset Formula $|vy|>0,$
+\end_inset
+
+ and 
+\begin_inset Formula $uv^{I}xy^{I}z\in L,\forall i\in\mathbb{{N}}\cup0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w=a^{P}c^{P}e^{P}b^{P}d^{P}f^{P}.$
+\end_inset
+
+ For 
+\begin_inset Formula $|vxy|\leq p,vxy\in a^{P},a^{P}c^{P},c^{P},c^{P}e^{P},e^{P},e^{P}b^{P},b^{P},b^{P}d^{P},d^{P},d^{P}f^{P},f^{P}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+11 case options:
+\end_layout
+
+\begin_layout Proof
+1) 
+\begin_inset Formula $vxy\in a^{P}.$
+\end_inset
+
+ If we pump v or y up we get 
+\begin_inset Formula $w'=a^{P+X}c^{P}e^{P}b^{P}d^{P}f^{P},X\not=0$
+\end_inset
+
+ but this has too many a's and b's compared to c's/d's & e's/f's.
+\end_layout
+
+\begin_layout Proof
+2) 
+\begin_inset Formula $vxy\in a^{P}c^{P}.$
+\end_inset
+
+ If we pump v or y up we get 
+\begin_inset Formula $w'=a^{P+X}c^{P+Y}e^{P}b^{P}d^{P}f^{P},XorY\not=0$
+\end_inset
+
+ but this has too many a's and b's and/or c's/d's compared to e's/f's.
+\end_layout
+
+\begin_layout Proof
+3) 
+\begin_inset Formula $vxy\in c^{P}.$
+\end_inset
+
+ If we pump v or y up we get 
+\begin_inset Formula $w'=a^{P}c^{P+X}e^{P}b^{P}d^{P}f^{P},X\not=0$
+\end_inset
+
+ but this has too many c's and d's compared to a's/b's & e's/f's.
+\end_layout
+
+\begin_layout Proof
+4) 
+\begin_inset Formula $vxy\in c^{P}e^{P}.$
+\end_inset
+
+ If we pump v or y up we get 
+\begin_inset Formula $w'=a^{P}c^{P+X}e^{P+Y}b^{P}d^{P}f^{P},XorY\not=0$
+\end_inset
+
+ but this has too many c's and d's and/or e's/f's compared to a's/b's.
+\end_layout
+
+\begin_layout Proof
+The rest of the cases to follow are trivial and follow the standard you
+ see here and they will all fail for the same or very similar reasons.
+ 
+\end_layout
+
+\begin_layout Proof
+As such, since this string falls all case options, L is not a context free
+ language.
+\end_layout
+
+\end_body
+\end_document

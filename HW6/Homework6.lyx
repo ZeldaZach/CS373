@@ -1,0 +1,582 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Zachary Halpern – Homework #6
+\end_layout
+
+\begin_layout Example*
+2.2a: Use the languages 
+\begin_inset Formula $A=\{a^{m}b^{n}c^{n}|m,n,\geq0\}$
+\end_inset
+
+ and 
+\begin_inset Formula $B=\{a^{n}b^{n}c^{m},|m,n\geq0\}$
+\end_inset
+
+ to show the class of context-free languages are not closed under intersection.
+\end_layout
+
+\begin_layout Proof
+We can prove that A is a CFL by defining a CFG, G, where 
+\begin_inset Formula $G=(V,\Sigma,R,S)$
+\end_inset
+
+ in which
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $V=\{S,A,B\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma=\{a,b,c\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $R=\begin{cases}
+S\to & AB\\
+A\to & Aa|\epsilon\\
+B\to & bBc|\epsilon
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+S = Start Variable = S.
+\end_layout
+
+\begin_layout Proof
+We can also prove that B is a CFL by defining a CFG, G2, where 
+\begin_inset Formula $G2=(V,\Sigma,R,S)$
+\end_inset
+
+ in which
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $V=\{W,C,D\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma=\{a,b,c\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $R=\begin{cases}
+W\to & CD\\
+C\to & aCb|\epsilon\\
+D\to & Dc\epsilon
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+S = Start Variable = W.
+\end_layout
+
+\begin_layout Proof
+So now we know that A and B are context-free languages.
+\end_layout
+
+\begin_layout Proof
+Using standard logic where the rules of A state that 
+\begin_inset Quotes eld
+\end_inset
+
+b=c
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+b and c must be greater then 0
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+The rules of B state that 
+\begin_inset Quotes eld
+\end_inset
+
+a=b
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+a and b must be greater then 0
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We can conclude that (
+\begin_inset Formula $A\cap B)$
+\end_inset
+
+ = a language where a=b=c, and all variables must be greater then 0 in length,
+ or 
+\begin_inset Formula $C=\{a^{n}b^{n}c^{n}|n\geq0\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Looking back at Example 2.36, we see how our new language we created, C,
+ is shown to not be a context-free language.
+\end_layout
+
+\begin_layout Proof
+Therefore, The class of context-free languages is NOT closed under intersection.
+\end_layout
+
+\begin_layout Example*
+2.2b: Use part a and DeMorgan's Law to show that the class of context-free
+ languages is NOT closed under complementation.
+\end_layout
+
+\begin_layout Proof
+Proof by contradiction.
+\end_layout
+
+\begin_layout Proof
+Suppose CFLs are closed under complementation.
+ As such, we can take the complement of A and, since we know that union
+ is closed under CFLs, take the complement of B and union them.
+ This results in 
+\begin_inset Formula $\bar{A}\cup\bar{B}$
+\end_inset
+
+.
+ Using DeMorgan's law, we can negate this entire expression to get 
+\begin_inset Formula $\overline{A\cap B}$
+\end_inset
+
+.
+ But we know that 
+\begin_inset Formula $A\cap B$
+\end_inset
+
+ is not closed under CFLs, so the complement doesn't exist, so either complement
+ation is invalid or union is invalid, but we know union is valid, so complementa
+tion must be invalid for CFLs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+2.4b: Give a context-free grammar that generates the following language:
+ 
+\begin_inset Formula $L=\{w|w$
+\end_inset
+
+ starts and ends w/ the same symbol}
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $G=(V,\Sigma,R,S)$
+\end_inset
+
+ in which
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $V=\{S,A\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma=\{0,1\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $R=\begin{cases}
+S\to & 0A0|1A1|\epsilon\\
+A\to & (0|1)A|\epsilon
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+S = Start Variable
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Give a CFG for 
+\begin_inset Formula $\{0^{a}1^{b}2^{c}3^{d}4^{e}5^{f}|a,b,c,d,e,f\geq0,$
+\end_inset
+
+ a+b=d+e}
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $G=(V,\Sigma,R,S)$
+\end_inset
+
+ in which
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $V=\{S,A,B,C,D,E,F\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma=\{0,1\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $R=\begin{cases}
+S\to & AF\\
+A\to & aAe|B|C|\epsilon\\
+B\to & aBd|C|\epsilon\\
+C\to & bCe|D|\epsilon\\
+D\to & bDd|E|\epsilon\\
+E\to & cE|\epsilon\\
+F\to & fF\epsilon
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+S = Start Variable
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+2.4e: Give a context-free grammar that generates the following language:
+ 
+\begin_inset Formula $L=\{w|w^{R}$
+\end_inset
+
+, that is, w is a palindrome}
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $G=(V,\Sigma,R,S)$
+\end_inset
+
+ in which
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $V=\{S\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma=\{0,1\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $R=\begin{cases}
+S\to & 0S0|1S1|0|1|\epsilon\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+S = Start Variable
+\end_layout
+
+\begin_layout Example*
+Put the rules in Chompsky normal form, S is start state.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $R=\begin{cases}
+S\to & aAA|aBC\\
+A\to & AA|Aa|ab\\
+B\to & aaBC|BC\\
+C\to & a|bc
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $R'=\begin{cases}
+A'\to & a\\
+B'\to & b\\
+C'\to & c\\
+S\to & A'D|EC\\
+A\to & AA|AA'|A'B'\\
+B\to & A'F|BC\\
+C\to & a|B'C'\\
+D\to & AA\\
+E\to & A'B\\
+F\to & EC
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+2.15: Give a counterexample to show that the following construction fails
+ to prove that the class of context-free languages is closed under star.
+\end_layout
+
+\begin_layout Example*
+Let A be a CFL that is generated by 
+\begin_inset Formula $G=(V,\Sigma,R,S)$
+\end_inset
+
+.
+ Add a new rule 
+\begin_inset Formula $S\to SS$
+\end_inset
+
+ and call the resulting grammar 
+\begin_inset Formula $G'.$
+\end_inset
+
+ This grammar is supposed to generate 
+\begin_inset Formula $A^{*}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Counterexample of CFG such that 
+\begin_inset Formula $G'=(V,\Sigma,R,S)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $V={\{S\}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma=\{a\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $R=\begin{cases}
+S\to & a\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+S = Start state.
+\end_layout
+
+\begin_layout Proof
+If we attempt to add a new rule, 
+\begin_inset Formula $S\to SS$
+\end_inset
+
+ then we get 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $R'=\begin{cases}
+S\to & SS|a\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+There is no way to get the entire of the start because you cannot generate
+ the empty string from these rules.
+ You can generate all other parts of the star operation, but you cannot
+ get the empty string.
+\end_layout
+
+\begin_layout Example*
+9: Show 
+\begin_inset Formula $\{xy|x,y\in\{0,1\}^{*},|x|=|y|,y\not=x^{R}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+There is a CFG 
+\begin_inset Formula $G=(V,\Sigma,R,S)$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $V=\{S,A\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma=\{0,1\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $R=\begin{cases}
+S\to & 0S0|1S1|0A1|1A0\\
+A\to & 0A0|1A1|0A1|1A0|\epsilon
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+S = Start State
+\end_layout
+
+\end_body
+\end_document
