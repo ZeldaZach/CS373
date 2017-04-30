@@ -1,0 +1,1064 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Zachary Halpern – Homework #8
+\end_layout
+
+\begin_layout Example*
+(1) 3.1A,C: Give the sequence of configurations that M2 enters when started
+ on the input:
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+0:
+\series default
+ 
+\begin_inset Formula $Q_{1}0\to\_Q_{2}\to Q_{accept}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+000:
+\series default
+ 
+\begin_inset Formula $Q_{1}000\to\_Q_{2}00\to\_xQ_{3}0\to\_x0Q_{4}\to Q_{reject}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+(2) 3.2B,C: Give the sequence of configurations that M1 enters when started
+ on the input:
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+1#1:
+\series default
+ 
+\begin_inset Formula $Q_{1}1\#1\to xQ_{2}\#1\to x\#Q_{5}1\to x\#Q_{6}x\to Q_{7}x\#x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $\to xQ_{1}\#x\to x\#Q_{8}x\to Q_{accept}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+1##1: 
+\begin_inset Formula $Q_{1}1\#\#1\to xQ_{3}\#\#1\to x\#Q_{5}\#1\to Q_{reject}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+(3): Describe a TM w/ sequence of steps that recognizes 
+\begin_inset Formula $\{w|w\in\{a,b,c\}^{*}$
+\end_inset
+
+ st |a| < |b| & |a| = |c| }
+\end_layout
+
+\begin_layout Proof
+Steps:
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 1:
+\series default
+ Go through the tape and if it contains X's, Y's, at least 1 b, no a's,
+ and no c's, H&A.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 2:
+\series default
+ Rewind the tape.
+ Go through the tape and at the first 
+\begin_inset Quotes eld
+\end_inset
+
+a
+\begin_inset Quotes erd
+\end_inset
+
+, turn it to an 
+\begin_inset Quotes eld
+\end_inset
+
+X
+\begin_inset Quotes erd
+\end_inset
+
+.
+ If no 
+\begin_inset Quotes eld
+\end_inset
+
+a
+\begin_inset Quotes erd
+\end_inset
+
+ is found, H&R.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 3:
+\series default
+ Rewind the tape.
+ Go through the tape at the first 
+\begin_inset Quotes eld
+\end_inset
+
+c
+\begin_inset Quotes erd
+\end_inset
+
+, turn it to an 
+\begin_inset Quotes eld
+\end_inset
+
+X
+\begin_inset Quotes erd
+\end_inset
+
+.
+ If no 
+\begin_inset Quotes eld
+\end_inset
+
+c
+\begin_inset Quotes erd
+\end_inset
+
+ is found, H&R.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 4:
+\series default
+ Rewind the tape.
+ Go through the tape and at the first 
+\begin_inset Quotes eld
+\end_inset
+
+b
+\begin_inset Quotes erd
+\end_inset
+
+ turn it into a 
+\begin_inset Quotes eld
+\end_inset
+
+Y
+\begin_inset Quotes erd
+\end_inset
+
+.
+ If no 
+\begin_inset Quotes eld
+\end_inset
+
+b
+\begin_inset Quotes erd
+\end_inset
+
+ found, H&R.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 5:
+\series default
+ Rewind the tape.
+ Go to step 1.
+\end_layout
+
+\begin_layout Example*
+(4): Show the equiv transitions for a 2-PDA for TM transitions.
+\end_layout
+
+\begin_layout Proof
+Construct a 2-PDA machine with the following definitions:
+\end_layout
+
+\begin_layout Proof
+Stack 1 will be in the inputs to the 
+\begin_inset Quotes eld
+\end_inset
+
+left
+\begin_inset Quotes erd
+\end_inset
+
+ of the R/W head of the equiv TM
+\end_layout
+
+\begin_layout Proof
+Stack 2 will be inputs to the 
+\begin_inset Quotes eld
+\end_inset
+
+right
+\begin_inset Quotes erd
+\end_inset
+
+ of the R/W head of the equiv TM
+\end_layout
+
+\begin_layout Proof
+[Stack1]{R/W HEAD}[Stack2] <=> xxxxHxxxx
+\end_layout
+
+\begin_layout Proof
+We can define this 2-PDA as: 
+\begin_inset Formula $P=(Q,\Sigma,\Gamma,\delta,q_{0},F)$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Proof
+The transition a TM would take (Read input, Write output, move head L/R)
+ => 
+\begin_inset Formula $(q_{i},X)\to(q_{j},A,L)/(q_{j},A,R)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+The transitions a PDA would take (Read input, Write output, Pop from stack
+ 1 and stack 2) => 
+\begin_inset Formula $(q_{i},X,S_{1},S_{2})\to(q_{j},T_{1},T_{2})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+These transitions in the PDA, to be equiv to the TM, would, if the TM needs
+ to move the R/W head to the right, READ the top of the stack from S2, determine
+ what action needs to be taken on it, write the output on the top of S1,
+ and continue on.
+ If the R/W head needed to move to the left, simply read from the top of
+ S1, determine the action, write to the top of S2, and continue.
+\end_layout
+
+\begin_layout Proof
+Once Stack 1 is completely empty, we know that the configuration on Stack
+ 2 would be equivalent to the TM if it had run on the inputs given.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+To move right, 
+\begin_inset Formula $(q_{i},X)\to(q_{j},A,R)$
+\end_inset
+
+.
+ 2-PDA Transition = 
+\begin_inset Formula $(q_{i},\epsilon,\epsilon,X)\to(q_{i},A,\epsilon)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+To move left, 
+\begin_inset Formula $(q_{i},X)\to(q_{j},A,L)$
+\end_inset
+
+.
+ 2-PDA Transition = 
+\begin_inset Formula $(q_{i},\epsilon,\epsilon,X)\to(q_{i},\epsilon,A)$
+\end_inset
+
+, 
+\begin_inset Formula $(q_{j},\epsilon,Y,\epsilon)\to(q_{k},\epsilon,Y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+(5): 3.8C: Give implementation-level descriptions of TM that decides {w|w
+ does not contains twice as many 0s as 1s}
+\end_layout
+
+\begin_layout Proof
+Steps:
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 1:
+\series default
+ Go through the tape and if it contains only X's and Y's, H&R.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 2:
+\series default
+ Rewind the tape.
+ Go through the tape and change the first 1 to an 
+\begin_inset Quotes eld
+\end_inset
+
+X
+\begin_inset Quotes erd
+\end_inset
+
+.
+ If no 1's are found, H&A.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 3:
+\series default
+ Rewind the tape.
+ Go through the tape and change the first 0 to a 
+\begin_inset Quotes eld
+\end_inset
+
+Y
+\begin_inset Quotes erd
+\end_inset
+
+.
+ If no 0's are found, H&A.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 4:
+\series default
+ Rewind the tape.
+ Go through the tape and change the first 0 to a 
+\begin_inset Quotes eld
+\end_inset
+
+Y
+\begin_inset Quotes erd
+\end_inset
+
+.
+ If no 0's are found, H&A.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 5:
+\series default
+ Rewind the tape.
+ Go to step 1.
+\end_layout
+
+\begin_layout Example*
+(6): Prove class of TR languages is closed under UNION.
+\end_layout
+
+\begin_layout Proof
+For any two TR languages, we can construct TMs that recognize them.
+ We can also create a TM that recognizes the union of these languages.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $L(M_{1})=L_{1},L(M_{2})=L_{2},L(M')=L_{1}\cup L_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+On an input w:
+\end_layout
+
+\begin_layout Proof
+1) Run TM 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ then 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+, alternating every step you take.
+ If either H&A then M' will H&A.
+ If either H&R, then M' will H&R.
+\end_layout
+
+\begin_layout Proof
+If either M1 or M2 accepts the string w, we know that M' accepts w because
+ M'
+\backslash
+s language is the addition of the two languages.
+\end_layout
+
+\begin_layout Proof
+Define the TM 
+\begin_inset Formula $M'=(Q,\Sigma,\Gamma,\delta,q_{0},q_{a}q_{r})$
+\end_inset
+
+ where
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Q=Q_{1}\cup Q_{2}\cup q_{r}\cup q_{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma=\Sigma_{1}\cup\Sigma_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Gamma=\Gamma_{1}\cup\Gamma_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\delta=\begin{cases}
+\delta_{1}(x,\alpha)\\
+\delta_{2}(x,\alpha)
+\end{cases}$
+\end_inset
+
+ rotate between running on d1 then d2 based on the input (first input =
+ d1, second d2, etc)
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $q_{0}=q_{10}\times q_{20}$
+\end_inset
+
+ (Start state from M1 and M2)
+\end_layout
+
+\begin_layout Proof
+qa = new accept state that the accept states of M1 and M2 go to
+\end_layout
+
+\begin_layout Proof
+qr = new reject state that all non-accept states in M1 and M2 go to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let L1, L2 be TM recognizable by TM M1, M2.
+\end_layout
+
+\begin_layout Proof
+Construct TM M,
+\end_layout
+
+\begin_layout Proof
+1) Simulate M1 and M2 in parallel.
+ (Alternate transitions from M1 and M2)
+\end_layout
+
+\begin_layout Proof
+2) If M1 or M2 H&A, then H&A.
+\end_layout
+
+\begin_layout Proof
+3) If M1 or M2 H&R, then H&R.
+\end_layout
+
+\begin_layout Proof
+Let w in L1 U L2.
+ M1 or M2 accepts w thus M accepts w in step 1.
+ So M accepts w and w in L(M).
+\end_layout
+
+\begin_layout Proof
+Let w in L(M).
+ That means M1 or M2 accepted w in Step 1.
+ So w in L1 U L2.
+\end_layout
+
+\begin_layout Example*
+(7): Prove class of decidable languages closed under CONCAT.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $L_{1},L_{2}$
+\end_inset
+
+ be decidable languages.
+ We can define the concatination of these languages as
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $L_{1}L_{2}=\{xy|x\in L_{1},y\in L_{2}\}$
+\end_inset
+
+.
+ Since these languages are decidable, then there exists TMs 
+\begin_inset Formula $M_{1},M_{2}$
+\end_inset
+
+ that decide those languages.
+\end_layout
+
+\begin_layout Proof
+In order to prove 
+\begin_inset Formula $L_{1}L_{2}$
+\end_inset
+
+ is a decidable language, we can construct TM 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ such that:
+\end_layout
+
+\begin_layout Proof
+1) ON input w, non-determinstically split w into strings xy.
+\end_layout
+
+\begin_layout Proof
+2) Run input x on M1 and input y on M2.
+\end_layout
+
+\begin_layout Proof
+3) If both M1 AND M2 H&A, then H&A.
+\end_layout
+
+\begin_layout Proof
+4) H&R.
+\end_layout
+
+\begin_layout Proof
+Since both M1 and M2 are decidable TMs, they will eventually either H&A
+ or H&R, so this new TM will Halt at some point and willnot run forever.
+ Thus M3 is decidable.
+\end_layout
+
+\begin_layout Proof
+Define the TM 
+\begin_inset Formula $M_{3}=(Q,\Sigma,\Gamma,\delta,q_{0},q_{a}q_{r})$
+\end_inset
+
+ where
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Q=Q_{1}\cup Q_{2}\cup q_{r}\cup$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma=\Sigma_{1}\cup\Sigma_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Gamma=\Gamma_{1}\cup\Gamma_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\delta=\begin{cases}
+\delta_{1}(x,\alpha)\\
+\delta_{2}(x,\alpha)
+\end{cases}$
+\end_inset
+
+ run on d1 until reach 
+\begin_inset Formula $q_{1a}$
+\end_inset
+
+ Then run on d2.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $q_{0}=q_{10}$
+\end_inset
+
+ (Start state from M1)
+\end_layout
+
+\begin_layout Proof
+qa = 
+\begin_inset Formula $q_{2a}$
+\end_inset
+
+ (Accept state from M2)
+\end_layout
+
+\begin_layout Proof
+qr = new reject state that all non-accept states in M1 and M2 go to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let L1, L2 be TM recognizable by TM M1, M2.
+\end_layout
+
+\begin_layout Proof
+Construct TM M, On input w:
+\end_layout
+
+\begin_layout Proof
+1) For each possible split w1w2=w, simulate M1 on w1 then simulate M2 on
+ w2.
+\end_layout
+
+\begin_layout Proof
+If both H&A, then H&A.
+\end_layout
+
+\begin_layout Proof
+2) H&R.
+\end_layout
+
+\begin_layout Proof
+Let w in L1oL2.
+ => w = w1w2 where w1 in L1, w2 in L2.
+ Thus one of the configurations in step 1 will cause M to accept.
+ So w in L(M).
+\end_layout
+
+\begin_layout Proof
+Let w in L(M).
+ => Means that for some w1w2, w = w1w2 where M1 accepts w1, and M2 accepts
+ w2.
+ 
+\end_layout
+
+\begin_layout Example*
+(8): Prove class of decidable languages closed under INTERSECTION.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $L_{1},L_{2}$
+\end_inset
+
+ be decidable languages.
+ Since these languages are decidable, then there exists TMs 
+\begin_inset Formula $M_{1},M_{2}$
+\end_inset
+
+ that decide those languages.
+\end_layout
+
+\begin_layout Proof
+We can define the intersection of these languages as 
+\begin_inset Formula $L_{1}\cap L_{2}$
+\end_inset
+
+ and create a TM, 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ that recognizes it.
+ To construct this TM:
+\end_layout
+
+\begin_layout Proof
+1) On input w, we will input w to 
+\begin_inset Formula $M_{1}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+2) If 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ H&R then H&R.
+ If 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ H&A, go to step 3.
+\end_layout
+
+\begin_layout Proof
+3) Input w to 
+\begin_inset Formula $M_{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+4) If 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ H&A then H&A.
+\end_layout
+
+\begin_layout Proof
+5) H&R.
+\end_layout
+
+\begin_layout Proof
+Since both M1 and M2 are decidable TMs, they will eventually either H&A
+ or H&R, so this new TM will Halt at some point and willnot run forever.
+ Thus M3 is decidable.
+\end_layout
+
+\begin_layout Proof
+Define the TM 
+\begin_inset Formula $M_{3}=(Q,\Sigma,\Gamma,\delta,q_{0},q_{a}q_{r})$
+\end_inset
+
+ where
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Q=Q_{1}\times Q_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Sigma=\Sigma_{1}\cup\Sigma_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Gamma=\Gamma_{1}\cup\Gamma_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\delta=\begin{cases}
+\delta_{1}(x,\alpha)\\
+\delta_{2}(x,\alpha)
+\end{cases}$
+\end_inset
+
+ run on d1 until accepted.
+ Then run on d2.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $q_{0}=q_{10}$
+\end_inset
+
+ (Start state from M1)
+\end_layout
+
+\begin_layout Proof
+qa = 
+\begin_inset Formula $q_{2a}$
+\end_inset
+
+ (Accept state from M2)
+\end_layout
+
+\begin_layout Proof
+qr = new reject state that all non-accept states in M1 and M2 go to
+\end_layout
+
+\begin_layout Exercise*
+(9): Prove class of TR languages closed under STAR.
+\end_layout
+
+\begin_layout Proof
+For a TR language L, with a TM M st L(M) = L, we can construct a TM M' that
+ recognizes L*.
+ We can construct M' as:
+\end_layout
+
+\begin_layout Proof
+1) On input w, split up w into parts 
+\begin_inset Formula $w_{1}w_{2}...w_{n.}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+2) Run M on 
+\begin_inset Formula $w_{i}\forall i\in[1,n].$
+\end_inset
+
+ If M H&R for any 
+\begin_inset Formula $w_{i},$
+\end_inset
+
+ then H&R.
+\end_layout
+
+\begin_layout Proof
+3) H&A.
+\end_layout
+
+\begin_layout Proof
+If there is a way to split up string w into pieces such that each piece
+ is in the language L, then there is apath in M' that accepts string w in
+ a finite number of steps.
+\end_layout
+
+\begin_layout Proof
+Define the TM 
+\begin_inset Formula $M'=(Q,\Sigma,\Gamma,\delta,q_{0},q_{a}q_{r})$
+\end_inset
+
+ where
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\delta=\begin{cases}
+\\
+\\
+\end{cases}$
+\end_inset
+
+ If no input, then go to qa.
+ If input, go through the states until qa is reached.
+ If additional input is found, go back to the first state in this loop.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $q_{0}=q_{10}$
+\end_inset
+
+ (Start state from M1)
+\end_layout
+
+\begin_layout Proof
+qa = New accept state.
+\end_layout
+
+\begin_layout Proof
+qr = new reject state that all non-accept states go to.
+\end_layout
+
+\begin_layout Example*
+(10): 3.18: Show that a language is decidable 
+\begin_inset Formula $\iff$
+\end_inset
+
+ some enumerator enumerates the language in the standard string order.
+\end_layout
+
+\begin_layout Proof
+(=>) Suppose we have a TM, M, that decides language L.
+ We can use M to construct an enumerator, E, such that:
+\end_layout
+
+\begin_layout Proof
+1) Generate strings in lexicographic order, and input each string into M.
+\end_layout
+
+\begin_layout Proof
+2) If M accepts, print the string out.
+\end_layout
+
+\begin_layout Proof
+3) E prints all the strings of L in lexicographic order.
+\end_layout
+
+\begin_layout Proof
+(<=) If we have an enumerator, E, for a language, L, then we can use E to
+ construct a TM, M, that decides L.
+\end_layout
+
+\begin_layout Proof
+We need to consider the following cases:
+\end_layout
+
+\begin_layout Proof
+1) If L is a finite language, it is decidable.
+\end_layout
+
+\begin_layout Proof
+2) If L is infinite, a decider for L is as follows:
+\end_layout
+
+\begin_layout Proof
+a) On input w, decider enumerates all strings of L in lexicographic order
+ until a string greater than w appears.
+\end_layout
+
+\begin_layout Proof
+This must eventually happen since language L is an infinite language.
+\end_layout
+
+\begin_layout Proof
+b) If w in enumeration, then accept.
+\end_layout
+
+\begin_layout Proof
+c) If w not in enumeration, it will never appear and we can reject.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+t
+\end_layout
+
+\end_body
+\end_document
