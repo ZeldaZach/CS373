@@ -150,6 +150,44 @@ On input <A,w> where A is a DFA and w is a string:
 \end_layout
 
 \begin_layout Proof
+(NOTE: DFA w/ m states accepts inf number of strings <=> accepts string
+ w/ length in interval [m, 2m))
+\end_layout
+
+\begin_layout Proof
+Define TM M such that:
+\end_layout
+
+\begin_layout Proof
+On input <A>:
+\end_layout
+
+\begin_layout Proof
+Construct NFA N st L(N) = L(A).
+\end_layout
+
+\begin_layout Proof
+Construct DFA D st L(D) = L(N) = L(A).
+\end_layout
+
+\begin_layout Proof
+Run DFA on all strings of length n.
+ N >= # of states in D && < 2n states.
+\end_layout
+
+\begin_layout Proof
+If D accepts a string, H&A.
+ Otherwise H&R.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
 We can construct a TM M such that:
 \end_layout
 
@@ -193,6 +231,70 @@ On input <A,w> where A is a RE and w is a string:
 \end_inset
 
  is decidable.
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Construct TM M st:
+\end_layout
+
+\begin_layout Proof
+(If we can construct DFA that represents L(A) U L(B), can use ALLDFA problem
+\end_layout
+
+\begin_layout Proof
+If we construct DFA that represents L(A) int L(B) can use ALLRE problem.)
+\end_layout
+
+\begin_layout Proof
+TM must change RE A into DFA (RE -> NFA -> DFA) D
+\end_layout
+
+\begin_layout Proof
+Construct DFA to recognize L(D) U L(B)
+\end_layout
+
+\begin_layout Proof
+Construct DFA that recognises L(D) int L(B) calling it I.
+\end_layout
+
+\begin_layout Proof
+EDFA(I) should be true.
+\end_layout
+
+\begin_layout Proof
+On input <A,B>:
+\end_layout
+
+\begin_layout Proof
+Construct NFA, construct DFA from that NFA.
+\end_layout
+
+\begin_layout Proof
+Construct DFA U, L(U) = L(D) U L(B)
+\end_layout
+
+\begin_layout Proof
+Construct DFA I, L(I) = L(D) int L(B)
+\end_layout
+
+\begin_layout Proof
+Simulate TM that decide AllDFA and Edfa with inputs <U>, and <I> respectively.
+\end_layout
+
+\begin_layout Proof
+If both accept, H&A.
+ Otherwise H&R.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -323,6 +425,41 @@ If
 \end_inset
 
  is decidable.
+\end_layout
+
+\begin_layout Proof
+Define TM M st:
+\end_layout
+
+\begin_layout Proof
+On input <G>, M will:
+\end_layout
+
+\begin_layout Proof
+1) Construct CFG G' in CNF with L(G') = L(G)
+\end_layout
+
+\begin_layout Proof
+2) If the rules of G' include 
+\begin_inset Quotes eld
+\end_inset
+
+S->e
+\begin_inset Quotes erd
+\end_inset
+
+ then H&R.
+\end_layout
+
+\begin_layout Proof
+3) H&A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
